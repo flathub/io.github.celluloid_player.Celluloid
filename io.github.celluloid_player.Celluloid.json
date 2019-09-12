@@ -1,7 +1,7 @@
 {
   "app-id": "io.github.celluloid_player.Celluloid",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.32",
+  "runtime-version": "3.34",
   "sdk": "org.gnome.Sdk",
   "command": "celluloid",
   "finish-args": [
@@ -18,25 +18,6 @@
       "--env=LC_NUMERIC=C"
   ],
   "modules": [
-    {
-      "name": "glib",
-      "//": "We are bundling a newer glib for GSettings fixes",
-      "buildsystem": "meson",
-      "cleanup": [
-        "/bin",
-        "/share",
-        "/include",
-        "/lib/glib-2.0",
-        "/lib/pkgconfig"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.gnome.org/sources/glib/2.60/glib-2.60.6.tar.xz",
-          "sha256": "ff8fab8d8deaa4fd0536c90f90d9769a09071779c7e6183907f6855645bffb6c"
-        }
-      ]
-    },
     {
       "name": "celluloid",
       "buildsystem": "meson",
@@ -79,7 +60,6 @@
             }
           ],
           "modules": [
-            "shared-modules/udev/udev-175.json",
             {
               "name": "luajit",
               "no-autogen": true,
@@ -99,7 +79,7 @@
             {
               "name": "libv4l2",
               "cleanup": [ "/sbin", "/bin", "/include", "/lib/*.la", "/lib/*/*.la", "/lib*/*/*/*.la", "/lib/pkgconfig", "/share/man" ],
-              "config-opts": [ "--disable-static", "--disable-bpf" ],
+              "config-opts": [ "--disable-static", "--disable-bpf", "--with-udevdir=/app/lib/udev" ],
               "sources": [{
                 "type": "archive",
                 "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.16.2.tar.bz2",
