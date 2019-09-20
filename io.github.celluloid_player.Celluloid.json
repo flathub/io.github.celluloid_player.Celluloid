@@ -105,20 +105,6 @@
                 "type": "archive",
                 "url": "https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz",
                 "sha256": "cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4"
-              }],
-              "modules": [{
-                "name": "libdav1d",
-                "buildsystem": "meson",
-                "config-opts": ["-Denable_tools=false"],
-                "cleanup": [
-                  "/include",
-                  "/lib/pkgconfig"
-                ],
-                "sources": [{
-                  "type": "archive",
-                  "url": "https://code.videolan.org/videolan/dav1d/-/archive/0.4.0/dav1d-0.4.0.tar.gz",
-                  "sha256": "f3a825bce590778b4959807470cd853bbcbd0d3c10d98958a3a1eea09ce64544"
-                }]
               }]
             },
             {
@@ -129,15 +115,6 @@
                 "type": "archive",
                 "url": "https://github.com/libass/libass/releases/download/0.14.0/libass-0.14.0.tar.xz",
                 "sha256": "881f2382af48aead75b7a0e02e65d88c5ebd369fe46bc77d9270a94aa8fd38a2"
-              }],
-              "modules": [{
-                "name": "fribidi",
-                "cleanup": [ "/bin", "/include", "/lib/pkgconfig", "/lib/*.la", "/share/man" ],
-                "sources": [{
-                  "type": "archive",
-                  "url": "https://github.com/fribidi/fribidi/releases/download/v1.0.5/fribidi-1.0.5.tar.bz2",
-                  "sha256": "6a64f2a687f5c4f203a46fa659f43dd43d1f8b845df8d723107e8a7e6158e4ce"
-                }]
               }]
             },
             {
