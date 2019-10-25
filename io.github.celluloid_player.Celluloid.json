@@ -42,7 +42,7 @@
           "cleanup": [ "/include", "/lib/pkgconfig", "/share/man" ],
           "buildsystem": "simple",
           "build-commands": [
-            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-oss-audio --disable-alsa --enable-tv",
+            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-oss-audio --disable-alsa",
             "python3 waf build",
             "python3 waf install"
           ],
@@ -85,6 +85,19 @@
                 "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.16.2.tar.bz2",
                 "sha256": "6c3208c9a1c73455d30bae83096d161e57bec5008594f270a2a67df8c86d8e47"
               }]
+            },
+            {
+              "name": "nv-codec-headers",
+              "cleanup": ["*"],
+              "no-autogen": true,
+              "make-install-args": ["PREFIX=/app"],
+              "sources": [
+                {
+                  "type": "git",
+                  "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
+                  "commit": "40e7dd3f646f303e584da1951a4840414a0ace4d"
+                }
+              ]
             },
             {
               "name": "ffmpeg",
