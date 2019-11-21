@@ -32,8 +32,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/celluloid-player/celluloid/releases/download/v0.17/celluloid-0.17.tar.xz",
-          "sha256": "0016078c02c1c8629a0658bd6eeb02be50d94a670983f53cbdb23f34f4866b28"
+          "url": "https://github.com/celluloid-player/celluloid/releases/download/v0.18/celluloid-0.18.tar.xz",
+          "sha256": "01114c1fc0f22ac9cb6e2776d874018a2b6827ac6cbd6aa974f7a2f55367ba3e"
         }
       ],
       "modules": [
@@ -49,8 +49,8 @@
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.29.1.tar.gz",
-              "sha256": "f9f9d461d1990f9728660b4ccb0e8cb5dce29ccaa6af567bec481b79291ca623"
+              "url": "https://github.com/mpv-player/mpv/archive/v0.30.0.tar.gz",
+              "sha256": "33a1bcb7e74ff17f070e754c15c52228cf44f2cefbfd8f34886ae81df214ca35"
             },
             {
               "type": "file",
@@ -164,8 +164,8 @@
       "sources": [{
         "type": "git",
         "url": "https://github.com/rg3/youtube-dl.git",
-        "tag": "2019.08.02",
-        "commit": "4f2d735803f723a8d8d6ffbbb1dd6b203f71af58"
+        "tag": "2019.11.05",
+        "commit": "ea07412ebf6fff7c17bcac9960cfe4e92ed62f12"
       }]
     }
   ]
