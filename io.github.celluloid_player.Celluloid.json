@@ -54,8 +54,8 @@
             },
             {
               "type": "file",
-              "url": "https://waf.io/waf-2.0.12",
-              "sha256": "0979ca87f45928e0d752049ab2f43be8551249be73dc5563b944ec54f8871d1f",
+              "url": "https://waf.io/waf-2.0.19",
+              "sha256": "ba63c90a865a9bcf46926c4e6776f9a3f73d29f33d49b7f61f96bc37b7397cef",
               "dest-filename": "waf"
             }
           ],
@@ -82,8 +82,8 @@
               "config-opts": [ "--disable-static", "--disable-bpf", "--with-udevdir=/app/lib/udev" ],
               "sources": [{
                 "type": "archive",
-                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.16.2.tar.bz2",
-                "sha256": "6c3208c9a1c73455d30bae83096d161e57bec5008594f270a2a67df8c86d8e47"
+                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.16.7.tar.bz2",
+                "sha256": "ee917a7e1af72c60c0532d9fdb9e48baf641d427aa7b009a9b2ca821f9e8e0d9"
               }]
             },
             {
@@ -95,7 +95,7 @@
                 {
                   "type": "git",
                   "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
-                  "commit": "40e7dd3f646f303e584da1951a4840414a0ace4d"
+                  "commit": "cf8b0b2bb70b59068b06f1d5610627c8aa6d5652"
                 }
               ]
             },
