@@ -49,8 +49,8 @@
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.30.0.tar.gz",
-              "sha256": "33a1bcb7e74ff17f070e754c15c52228cf44f2cefbfd8f34886ae81df214ca35"
+              "url": "https://github.com/mpv-player/mpv/archive/v0.31.0.tar.gz",
+              "sha256": "805a3ac8cf51bfdea6087a6480c18835101da0355c8e469b6d488a1e290585a5"
             },
             {
               "type": "file",
@@ -164,8 +164,8 @@
       "sources": [{
         "type": "git",
         "url": "https://github.com/rg3/youtube-dl.git",
-        "tag": "2019.11.05",
-        "commit": "ea07412ebf6fff7c17bcac9960cfe4e92ed62f12"
+        "tag": "2019.12.25",
+        "commit": "80e43af5bff8a7e91ff39b9e3f39e7251340692f"
       }]
     }
   ]
