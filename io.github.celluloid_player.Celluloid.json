@@ -164,8 +164,8 @@
       "sources": [{
         "type": "git",
         "url": "https://github.com/rg3/youtube-dl.git",
-        "tag": "2019.12.25",
-        "commit": "80e43af5bff8a7e91ff39b9e3f39e7251340692f"
+        "tag": "2020.01.24",
+        "commit": "76dbe4df5f931de47a25c7962ef55b2a261cf1a8"
       }]
     }
   ]
