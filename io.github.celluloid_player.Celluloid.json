@@ -1,7 +1,7 @@
 {
   "app-id": "io.github.celluloid_player.Celluloid",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.34",
+  "runtime-version": "3.36",
   "sdk": "org.gnome.Sdk",
   "command": "celluloid",
   "finish-args": [
@@ -49,8 +49,8 @@
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.31.0.tar.gz",
-              "sha256": "805a3ac8cf51bfdea6087a6480c18835101da0355c8e469b6d488a1e290585a5"
+              "url": "https://github.com/mpv-player/mpv/archive/v0.32.0.tar.gz",
+              "sha256": "9163f64832226d22e24bbc4874ebd6ac02372cd717bef15c28a0aa858c5fe592"
             },
             {
               "type": "file",
@@ -116,8 +116,8 @@
               ],
               "sources": [{
                 "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz",
-                "sha256": "cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4"
+                "url": "https://ffmpeg.org/releases/ffmpeg-4.2.2.tar.xz",
+                "sha256": "cb754255ab0ee2ea5f66f8850e1bd6ad5cac1cd855d0a2f4990fb8c668b0d29c"
               }]
             },
             {
@@ -164,8 +164,8 @@
       "sources": [{
         "type": "git",
         "url": "https://github.com/rg3/youtube-dl.git",
-        "tag": "2020.01.24",
-        "commit": "76dbe4df5f931de47a25c7962ef55b2a261cf1a8"
+        "tag": "2020.03.24",
+        "commit": "049c0486bbd57a9bb5fb5a6a5eeff82fd4ac03ff"
       }]
     }
   ]
