@@ -32,8 +32,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/celluloid-player/celluloid/releases/download/v0.19/celluloid-0.19.tar.xz",
-          "sha256": "5413799506ad82c1ed513e18bee566b814f170364b6f662321f19954759c78e8"
+          "url": "https://github.com/celluloid-player/celluloid/releases/download/v0.20/celluloid-0.20.tar.xz",
+          "sha256": "63798c4cd7da818aef3ddbfed64d67a6db7b14d3774d143db18cefc6aed8524e"
         }
       ],
       "modules": [
