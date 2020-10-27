@@ -1,7 +1,7 @@
 {
   "app-id": "io.github.celluloid_player.Celluloid",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.36",
+  "runtime-version": "3.38",
   "sdk": "org.gnome.Sdk",
   "command": "celluloid",
   "finish-args": [
@@ -54,8 +54,8 @@
             },
             {
               "type": "file",
-              "url": "https://waf.io/waf-2.0.19",
-              "sha256": "ba63c90a865a9bcf46926c4e6776f9a3f73d29f33d49b7f61f96bc37b7397cef",
+              "url": "https://waf.io/waf-2.0.20",
+              "sha256": "bf971e98edc2414968a262c6aa6b88541a26c3cd248689c89f4c57370955ee7f",
               "dest-filename": "waf"
             }
           ],
@@ -82,8 +82,8 @@
               "config-opts": [ "--disable-static", "--disable-bpf", "--with-udevdir=/app/lib/udev" ],
               "sources": [{
                 "type": "archive",
-                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.16.7.tar.bz2",
-                "sha256": "ee917a7e1af72c60c0532d9fdb9e48baf641d427aa7b009a9b2ca821f9e8e0d9"
+                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.20.0.tar.bz2",
+                "sha256": "956118713f7ccb405c55c7088a6a2490c32d54300dd9a30d8d5008c28d3726f7"
               }]
             },
             {
@@ -95,7 +95,8 @@
                 {
                   "type": "git",
                   "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
-                  "commit": "cf8b0b2bb70b59068b06f1d5610627c8aa6d5652"
+                  "tag": "n8.2.15.11",
+                  "commit": "58c159153814260c02c580716677bc4e823dfeff"
                 }
               ]
             },
@@ -116,8 +117,8 @@
               ],
               "sources": [{
                 "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-4.2.3.tar.xz",
-                "sha256": "9df6c90aed1337634c1fb026fb01c154c29c82a64ea71291ff2da9aacb9aad31"
+                "url": "https://ffmpeg.org/releases/ffmpeg-4.3.1.tar.xz",
+                "sha256": "ad009240d46e307b4e03a213a0f49c11b650e445b1f8be0dda2a9212b34d2ffb"
               }]
             },
             {
@@ -126,8 +127,8 @@
               "config-opts": [ "--disable-static" ],
               "sources": [{
                 "type": "archive",
-                "url": "https://github.com/libass/libass/releases/download/0.14.0/libass-0.14.0.tar.xz",
-                "sha256": "881f2382af48aead75b7a0e02e65d88c5ebd369fe46bc77d9270a94aa8fd38a2"
+                "url": "https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.xz",
+                "sha256": "9f09230c9a0aa68ef7aa6a9e2ab709ca957020f842e52c5b2e52b801a7d9e833"
               }]
             },
             {
@@ -146,8 +147,8 @@
               "sources": [
                 {
                   "type": "archive",
-                  "url": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.6.tar.xz",
-                  "sha256": "8351328cdfbcb2432e63938721dd781eb8c11ebc56e3a89d0f84576b96002c61"
+                  "url": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.7.tar.xz",
+                  "sha256": "3fc79408ae1d84b406922fa9319ce005631c95ca0f34b205fad867e8b30e45b1"
                 }
               ]
             }
@@ -163,9 +164,9 @@
       "post-install": ["install youtube-dl /app/bin"],
       "sources": [{
         "type": "git",
-        "url": "https://github.com/rg3/youtube-dl.git",
-        "tag": "2020.05.29",
-        "commit": "228c1d685bb6d35b2c1a73e1adbc085c76da6b75"
+        "url": "https://gitlab.com/ytdl-org/youtube-dl.git",
+        "tag": "2020.09.20",
+        "commit": "b55715934bb7f9474f69b99e4d51cc83dee7cbef"
       }]
     }
   ]
