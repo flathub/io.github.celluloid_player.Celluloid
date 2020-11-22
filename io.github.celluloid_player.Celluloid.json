@@ -49,13 +49,13 @@
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.32.0.tar.gz",
-              "sha256": "9163f64832226d22e24bbc4874ebd6ac02372cd717bef15c28a0aa858c5fe592"
+              "url": "https://github.com/mpv-player/mpv/archive/v0.33.0.tar.gz",
+              "sha256": "f1b9baf5dc2eeaf376597c28a6281facf6ed98ff3d567e3955c95bf2459520b4"
             },
             {
               "type": "file",
-              "url": "https://waf.io/waf-2.0.20",
-              "sha256": "bf971e98edc2414968a262c6aa6b88541a26c3cd248689c89f4c57370955ee7f",
+              "url": "https://waf.io/waf-2.0.21",
+              "sha256": "7cebf2c5efe53cbb9a4b5bdc4b49ae90ecd64a8fce7a3222d58e591b58215306",
               "dest-filename": "waf"
             }
           ],
@@ -164,9 +164,9 @@
       "post-install": ["install youtube-dl /app/bin"],
       "sources": [{
         "type": "git",
-        "url": "https://gitlab.com/ytdl-org/youtube-dl.git",
-        "tag": "2020.09.20",
-        "commit": "b55715934bb7f9474f69b99e4d51cc83dee7cbef"
+        "url": "https://github.com/ytdl-org/youtube-dl.git",
+        "tag": "2020.11.21.1",
+        "commit": "f23eceebbfa0aa26f7ff598026ee6029233148b6"
       }]
     }
   ]
