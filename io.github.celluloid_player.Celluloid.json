@@ -39,10 +39,10 @@
       "modules": [
         {
           "name": "libmpv",
-          "cleanup": [ "/include", "/lib/pkgconfig", "/share/man" ],
+          "cleanup": [ "/include", "/lib/pkgconfig", "/share/applications", "/share/bash-completion", "/share/doc", "/share/icons", "/share/man", "/share/zsh" ],
           "buildsystem": "simple",
           "build-commands": [
-            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-alsa",
+            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-build-date --disable-alsa",
             "python3 waf build",
             "python3 waf install"
           ],
