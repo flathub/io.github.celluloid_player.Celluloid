@@ -9,6 +9,7 @@
       "--socket=fallback-x11",
       "--socket=wayland",
       "--device=all",
+      "--filesystem=xdg-run/pipewire-0:ro",
       "--share=network",
       "--socket=pulseaudio",
       "--filesystem=xdg-pictures",
@@ -60,6 +61,23 @@
             }
           ],
           "modules": [
+            {
+              "name": "jack2",
+              "buildsystem": "simple",
+              "build-commands": [
+                "python3 waf configure --prefix=/app",
+                "python3 waf build",
+                "python3 waf install"
+              ],
+              "cleanup": [ "*" ],
+              "sources": [
+                {
+                  "type": "archive",
+                  "url": "https://github.com/jackaudio/jack2/archive/v1.9.16.tar.gz",
+                  "sha256": "e176d04de94dcaa3f9d32ca1825091e1b938783a78c84e7466abd06af7637d37"
+                }
+              ]
+            },
             {
               "name": "luajit",
               "no-autogen": true,
