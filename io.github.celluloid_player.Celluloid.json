@@ -185,8 +185,8 @@
       "sources": [{
         "type": "git",
         "url": "https://github.com/ytdl-org/youtube-dl.git",
-        "tag": "2021.01.24.1",
-        "commit": "b63981e85095542e056d7180496de4a2d85ddf9e"
+        "tag": "2021.03.03",
+        "commit": "f68692b004f1c65f08a9a7d9c2ee4ab2ec255ea6"
       }]
     }
   ]
