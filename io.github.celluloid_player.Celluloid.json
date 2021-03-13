@@ -54,8 +54,8 @@
             },
             {
               "type": "file",
-              "url": "https://waf.io/waf-2.0.21",
-              "sha256": "7cebf2c5efe53cbb9a4b5bdc4b49ae90ecd64a8fce7a3222d58e591b58215306",
+              "url": "https://waf.io/waf-2.0.22",
+              "sha256": "0a09ad26a2cfc69fa26ab871cb558165b60374b5a653ff556a0c6aca63a00df1",
               "dest-filename": "waf"
             }
           ],
