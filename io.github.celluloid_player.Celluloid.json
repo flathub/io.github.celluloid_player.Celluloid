@@ -168,11 +168,7 @@
                 {
                   "type": "git",
                   "url": "https://github.com/ccxvii/mujs",
-                  "tag": "1.0.9"
-                },
-                {
-                  "type": "patch",
-                  "path": "mujs-build-flags.patch"
+                  "tag": "1.1.0"
                 }
               ]
             }
