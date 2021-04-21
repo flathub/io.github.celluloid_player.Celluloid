@@ -33,7 +33,14 @@
         {
           "type": "archive",
           "url": "https://github.com/celluloid-player/celluloid/releases/download/v0.20/celluloid-0.20.tar.xz",
-          "sha256": "63798c4cd7da818aef3ddbfed64d67a6db7b14d3774d143db18cefc6aed8524e"
+          "sha256": "63798c4cd7da818aef3ddbfed64d67a6db7b14d3774d143db18cefc6aed8524e",
+          "x-checker-data": {
+            "type": "anitya",
+            "project-id": 193876,
+            "stable-only": true,
+            "url-template": "https://github.com/celluloid-player/celluloid/releases/download/v$version/celluloid-$version.tar.xz",
+            "is-main-source": true
+          }
         }
       ],
       "modules": [
@@ -50,13 +57,25 @@
             {
               "type": "archive",
               "url": "https://github.com/mpv-player/mpv/archive/v0.33.1.tar.gz",
-              "sha256": "100a116b9f23bdcda3a596e9f26be3a69f166a4f1d00910d1789b6571c46f3a9"
+              "sha256": "100a116b9f23bdcda3a596e9f26be3a69f166a4f1d00910d1789b6571c46f3a9",
+              "x-checker-data": {
+                "type": "anitya",
+                "project-id": 5348,
+                "stable-only": true,
+                "url-template": "https://github.com/mpv-player/mpv/archive/v$version.tar.gz"
+              }
             },
             {
               "type": "file",
               "url": "https://waf.io/waf-2.0.22",
               "sha256": "0a09ad26a2cfc69fa26ab871cb558165b60374b5a653ff556a0c6aca63a00df1",
-              "dest-filename": "waf"
+              "dest-filename": "waf",
+              "x-checker-data": {
+                "type": "anitya",
+                "project-id": 5116,
+                "stable-only": true,
+                "url-template": "https://waf.io/waf-$version"
+              }
             }
           ],
           "modules": [
@@ -83,7 +102,13 @@
               "sources": [{
                 "type": "archive",
                 "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.20.0.tar.bz2",
-                "sha256": "956118713f7ccb405c55c7088a6a2490c32d54300dd9a30d8d5008c28d3726f7"
+                "sha256": "956118713f7ccb405c55c7088a6a2490c32d54300dd9a30d8d5008c28d3726f7",
+                "x-checker-data": {
+                  "type": "anitya",
+                  "project-id": 9998,
+                  "stable-only": true,
+                  "url-template": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-$version.tar.bz2"
+                }
               }]
             },
             {
@@ -96,7 +121,11 @@
                   "type": "git",
                   "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
                   "tag": "n11.0.10.0",
-                  "commit": "7a81595786463d1c7efcb03aa85def69fc2cad41"
+                  "commit": "7a81595786463d1c7efcb03aa85def69fc2cad41",
+                  "x-checker-data": {
+                    "type": "git",
+                    "tag-pattern": "^n([\\d.]+)$"
+                  }
                 }
               ]
             },
@@ -118,7 +147,13 @@
               "sources": [{
                 "type": "archive",
                 "url": "https://ffmpeg.org/releases/ffmpeg-4.3.2.tar.xz",
-                "sha256": "46e4e64f1dd0233cbc0934b9f1c0da676008cad34725113fb7f802cfa84ccddb"
+                "sha256": "46e4e64f1dd0233cbc0934b9f1c0da676008cad34725113fb7f802cfa84ccddb",
+                "x-checker-data": {
+                  "type": "anitya",
+                  "project-id": 5405,
+                  "stable-only": true,
+                  "url-template": "https://ffmpeg.org/releases/ffmpeg-$version.tar.xz"
+                }
               }]
             },
             {
@@ -128,7 +163,13 @@
               "sources": [{
                 "type": "archive",
                 "url": "https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.xz",
-                "sha256": "9f09230c9a0aa68ef7aa6a9e2ab709ca957020f842e52c5b2e52b801a7d9e833"
+                "sha256": "9f09230c9a0aa68ef7aa6a9e2ab709ca957020f842e52c5b2e52b801a7d9e833",
+                "x-checker-data": {
+                  "type": "anitya",
+                  "project-id": 1560,
+                  "stable-only": true,
+                  "url-template": "https://github.com/libass/libass/releases/download/$version/libass-$version.tar.xz"
+                }
               }]
             },
             {
@@ -148,7 +189,13 @@
                 {
                   "type": "archive",
                   "url": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.7.tar.xz",
-                  "sha256": "3fc79408ae1d84b406922fa9319ce005631c95ca0f34b205fad867e8b30e45b1"
+                  "sha256": "3fc79408ae1d84b406922fa9319ce005631c95ca0f34b205fad867e8b30e45b1",
+                  "x-checker-data": {
+                    "type": "anitya",
+                    "project-id": 9265,
+                    "stable-only": true,
+                    "url-template": "https://www.freedesktop.org/software/uchardet/releases/uchardet-$version.tar.xz"
+                  }
                 }
               ]
             },
@@ -168,7 +215,12 @@
                 {
                   "type": "git",
                   "url": "https://github.com/ccxvii/mujs",
-                  "tag": "1.1.0"
+                  "tag": "1.1.0",
+                  "commit": "80e222d91d4438f111237873c7910b4c0eacb749",
+                  "x-checker-data": {
+                    "type": "git",
+                    "tag-pattern": "^([\\d.]+)$"
+                  }
                 }
               ]
             }
@@ -186,7 +238,11 @@
         "type": "git",
         "url": "https://github.com/ytdl-org/youtube-dl.git",
         "tag": "2021.03.03",
-        "commit": "f68692b004f1c65f08a9a7d9c2ee4ab2ec255ea6"
+        "commit": "f68692b004f1c65f08a9a7d9c2ee4ab2ec255ea6",
+        "x-checker-data": {
+          "type": "git",
+          "tag-pattern": "^([\\d.]+)$"
+        }
       }]
     }
   ]
