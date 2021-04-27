@@ -1,249 +1,312 @@
 {
-  "app-id": "io.github.celluloid_player.Celluloid",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "40",
-  "sdk": "org.gnome.Sdk",
-  "command": "celluloid",
-  "finish-args": [
-      "--share=ipc",
-      "--socket=fallback-x11",
-      "--socket=wayland",
-      "--device=all",
-      "--share=network",
-      "--socket=pulseaudio",
-      "--filesystem=xdg-pictures",
-      "--talk-name=org.gtk.vfs",
-      "--talk-name=org.gtk.vfs.*",
-      "--talk-name=org.gnome.SettingsDaemon.MediaKeys",
-      "--env=LC_NUMERIC=C"
-  ],
-  "modules": [
-    {
-      "name": "celluloid",
-      "buildsystem": "meson",
-      "config-opts": ["--buildtype=release"],
-      "cleanup": ["/share/man"],
-      "post-install": [
-        "for size in 64 128; do
-          rsvg-convert -w $size -h $size -f png -o $size.png /app/share/icons/hicolor/scalable/apps/io.github.celluloid_player.Celluloid.svg
-          install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/io.github.celluloid_player.Celluloid.png
-        done"
-      ],
-      "sources": [
+    "app-id": "io.github.celluloid_player.Celluloid",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "40",
+    "sdk": "org.gnome.Sdk",
+    "command": "celluloid",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=all",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--filesystem=xdg-pictures",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*",
+        "--talk-name=org.gnome.SettingsDaemon.MediaKeys",
+        "--env=LC_NUMERIC=C"
+    ],
+    "modules": [
         {
-          "type": "archive",
-          "url": "https://github.com/celluloid-player/celluloid/releases/download/v0.20/celluloid-0.20.tar.xz",
-          "sha256": "63798c4cd7da818aef3ddbfed64d67a6db7b14d3774d143db18cefc6aed8524e",
-          "x-checker-data": {
-            "type": "anitya",
-            "project-id": 193876,
-            "stable-only": true,
-            "url-template": "https://github.com/celluloid-player/celluloid/releases/download/v$version/celluloid-$version.tar.xz",
-            "is-main-source": true
-          }
-        }
-      ],
-      "modules": [
-        {
-          "name": "libmpv",
-          "cleanup": [ "/include", "/lib/pkgconfig", "/share/applications", "/share/bash-completion", "/share/doc", "/share/icons", "/share/man", "/share/zsh" ],
-          "buildsystem": "simple",
-          "build-commands": [
-            "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-build-date --disable-alsa",
-            "python3 waf build",
-            "python3 waf install"
-          ],
-          "sources": [
-            {
-              "type": "archive",
-              "url": "https://github.com/mpv-player/mpv/archive/v0.33.1.tar.gz",
-              "sha256": "100a116b9f23bdcda3a596e9f26be3a69f166a4f1d00910d1789b6571c46f3a9",
-              "x-checker-data": {
-                "type": "anitya",
-                "project-id": 5348,
-                "stable-only": true,
-                "url-template": "https://github.com/mpv-player/mpv/archive/v$version.tar.gz"
-              }
-            },
-            {
-              "type": "file",
-              "url": "https://waf.io/waf-2.0.22",
-              "sha256": "0a09ad26a2cfc69fa26ab871cb558165b60374b5a653ff556a0c6aca63a00df1",
-              "dest-filename": "waf",
-              "x-checker-data": {
-                "type": "anitya",
-                "project-id": 5116,
-                "stable-only": true,
-                "url-template": "https://waf.io/waf-$version"
-              }
-            }
-          ],
-          "modules": [
-            {
-              "name": "luajit",
-              "no-autogen": true,
-              "cleanup": [ "/bin", "/lib/*.a", "/include", "/lib/pkgconfig", "/share/man" ],
-              "sources": [
-                {
-                  "type": "archive",
-                  "url": "http://luajit.org/download/LuaJIT-2.1.0-beta3.tar.gz",
-                  "sha256": "1ad2e34b111c802f9d0cdf019e986909123237a28c746b21295b63c9e785d9c3"
-                },
-                {
-                  "type": "shell",
-                  "commands": [ "sed -i 's|/usr/local|/app|' ./Makefile" ]
-                }
-              ]
-            },
-            {
-              "name": "libv4l2",
-              "cleanup": [ "/sbin", "/bin", "/include", "/lib/*.la", "/lib/*/*.la", "/lib*/*/*/*.la", "/lib/pkgconfig", "/share/man" ],
-              "config-opts": [ "--disable-static", "--disable-bpf", "--with-udevdir=/app/lib/udev" ],
-              "sources": [{
-                "type": "archive",
-                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.20.0.tar.bz2",
-                "sha256": "956118713f7ccb405c55c7088a6a2490c32d54300dd9a30d8d5008c28d3726f7",
-                "x-checker-data": {
-                  "type": "anitya",
-                  "project-id": 9998,
-                  "stable-only": true,
-                  "url-template": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-$version.tar.bz2"
-                }
-              }]
-            },
-            {
-              "name": "nv-codec-headers",
-              "cleanup": ["*"],
-              "no-autogen": true,
-              "make-install-args": ["PREFIX=/app"],
-              "sources": [
-                {
-                  "type": "git",
-                  "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
-                  "tag": "n11.0.10.0",
-                  "commit": "7a81595786463d1c7efcb03aa85def69fc2cad41",
-                  "x-checker-data": {
-                    "type": "git",
-                    "tag-pattern": "^n([\\d.]+)$"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "ffmpeg",
-              "cleanup": [ "/include", "/lib/pkgconfig", "/share/ffmpeg/examples" ],
-              "config-opts": [
-                "--enable-shared",
-                "--disable-static",
-                "--enable-gnutls",
-                "--disable-doc",
-                "--disable-programs",
-                "--disable-encoders",
-                "--disable-muxers",
-                "--enable-encoder=png",
-                "--enable-libv4l2",
-                "--enable-libdav1d"
-              ],
-              "sources": [{
-                "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-4.3.2.tar.xz",
-                "sha256": "46e4e64f1dd0233cbc0934b9f1c0da676008cad34725113fb7f802cfa84ccddb",
-                "x-checker-data": {
-                  "type": "anitya",
-                  "project-id": 5405,
-                  "stable-only": true,
-                  "url-template": "https://ffmpeg.org/releases/ffmpeg-$version.tar.xz"
-                }
-              }]
-            },
-            {
-              "name": "libass",
-              "cleanup": [ "/include", "/lib/*.la", "/lib/pkgconfig" ],
-              "config-opts": [ "--disable-static" ],
-              "sources": [{
-                "type": "archive",
-                "url": "https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.xz",
-                "sha256": "9f09230c9a0aa68ef7aa6a9e2ab709ca957020f842e52c5b2e52b801a7d9e833",
-                "x-checker-data": {
-                  "type": "anitya",
-                  "project-id": 1560,
-                  "stable-only": true,
-                  "url-template": "https://github.com/libass/libass/releases/download/$version/libass-$version.tar.xz"
-                }
-              }]
-            },
-            {
-              "name": "uchardet",
-              "buildsystem": "cmake-ninja",
-              "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DBUILD_STATIC=0"
-              ],
-              "cleanup": [
-                "/bin",
-                "/include",
-                "/lib/pkgconfig",
+            "name": "celluloid",
+            "buildsystem": "meson",
+            "config-opts": [
+                "--buildtype=release"
+            ],
+            "cleanup": [
                 "/share/man"
-              ],
-              "sources": [
+            ],
+            "post-install": [
+                "for size in 64 128; do\n          rsvg-convert -w $size -h $size -f png -o $size.png /app/share/icons/hicolor/scalable/apps/io.github.celluloid_player.Celluloid.svg\n          install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/io.github.celluloid_player.Celluloid.png\n        done"
+            ],
+            "sources": [
                 {
-                  "type": "archive",
-                  "url": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.7.tar.xz",
-                  "sha256": "3fc79408ae1d84b406922fa9319ce005631c95ca0f34b205fad867e8b30e45b1",
-                  "x-checker-data": {
-                    "type": "anitya",
-                    "project-id": 9265,
-                    "stable-only": true,
-                    "url-template": "https://www.freedesktop.org/software/uchardet/releases/uchardet-$version.tar.xz"
-                  }
+                    "type": "archive",
+                    "url": "https://github.com/celluloid-player/celluloid/releases/download/v0.21/celluloid-0.21.tar.xz",
+                    "sha256": "2299d8cc1a5a620cc3686495da22ac4ccd6dd020827d9dd27e19a61d83707eb7",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 193876,
+                        "stable-only": true,
+                        "url-template": "https://github.com/celluloid-player/celluloid/releases/download/v$version/celluloid-$version.tar.xz",
+                        "is-main-source": true
+                    }
                 }
-              ]
-            },
-            {
-              "name": "mujs",
-              "cleanup": [ "/bin", "/include", "/lib/pkgconfig", "/lib/libmujs.a" ],
-              "no-autogen": true,
-              "make-args": [
-                "release",
-                "shared"
-              ],
-              "make-install-args": [
-                "prefix=/app",
-                "install-shared"
-              ],
-              "sources": [
+            ],
+            "modules": [
                 {
-                  "type": "git",
-                  "url": "https://github.com/ccxvii/mujs",
-                  "tag": "1.1.0",
-                  "commit": "80e222d91d4438f111237873c7910b4c0eacb749",
-                  "x-checker-data": {
+                    "name": "libmpv",
+                    "cleanup": [
+                        "/include",
+                        "/lib/pkgconfig",
+                        "/share/applications",
+                        "/share/bash-completion",
+                        "/share/doc",
+                        "/share/icons",
+                        "/share/man",
+                        "/share/zsh"
+                    ],
+                    "buildsystem": "simple",
+                    "build-commands": [
+                        "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-build-date --disable-alsa",
+                        "python3 waf build",
+                        "python3 waf install"
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://github.com/mpv-player/mpv/archive/v0.33.1.tar.gz",
+                            "sha256": "100a116b9f23bdcda3a596e9f26be3a69f166a4f1d00910d1789b6571c46f3a9",
+                            "x-checker-data": {
+                                "type": "anitya",
+                                "project-id": 5348,
+                                "stable-only": true,
+                                "url-template": "https://github.com/mpv-player/mpv/archive/v$version.tar.gz"
+                            }
+                        },
+                        {
+                            "type": "file",
+                            "url": "https://waf.io/waf-2.0.22",
+                            "sha256": "0a09ad26a2cfc69fa26ab871cb558165b60374b5a653ff556a0c6aca63a00df1",
+                            "dest-filename": "waf",
+                            "x-checker-data": {
+                                "type": "anitya",
+                                "project-id": 5116,
+                                "stable-only": true,
+                                "url-template": "https://waf.io/waf-$version"
+                            }
+                        }
+                    ],
+                    "modules": [
+                        {
+                            "name": "luajit",
+                            "no-autogen": true,
+                            "cleanup": [
+                                "/bin",
+                                "/lib/*.a",
+                                "/include",
+                                "/lib/pkgconfig",
+                                "/share/man"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "http://luajit.org/download/LuaJIT-2.1.0-beta3.tar.gz",
+                                    "sha256": "1ad2e34b111c802f9d0cdf019e986909123237a28c746b21295b63c9e785d9c3"
+                                },
+                                {
+                                    "type": "shell",
+                                    "commands": [
+                                        "sed -i 's|/usr/local|/app|' ./Makefile"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "libv4l2",
+                            "cleanup": [
+                                "/sbin",
+                                "/bin",
+                                "/include",
+                                "/lib/*.la",
+                                "/lib/*/*.la",
+                                "/lib*/*/*/*.la",
+                                "/lib/pkgconfig",
+                                "/share/man"
+                            ],
+                            "config-opts": [
+                                "--disable-static",
+                                "--disable-bpf",
+                                "--with-udevdir=/app/lib/udev"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.20.0.tar.bz2",
+                                    "sha256": "956118713f7ccb405c55c7088a6a2490c32d54300dd9a30d8d5008c28d3726f7",
+                                    "x-checker-data": {
+                                        "type": "anitya",
+                                        "project-id": 9998,
+                                        "stable-only": true,
+                                        "url-template": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-$version.tar.bz2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "nv-codec-headers",
+                            "cleanup": [
+                                "*"
+                            ],
+                            "no-autogen": true,
+                            "make-install-args": [
+                                "PREFIX=/app"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "git",
+                                    "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
+                                    "tag": "n11.0.10.1",
+                                    "commit": "315ad740ac77282c7cea67ba31f2e4b373132919",
+                                    "x-checker-data": {
+                                        "type": "git",
+                                        "tag-pattern": "^n([\\d.]+)$"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ffmpeg",
+                            "cleanup": [
+                                "/include",
+                                "/lib/pkgconfig",
+                                "/share/ffmpeg/examples"
+                            ],
+                            "config-opts": [
+                                "--enable-shared",
+                                "--disable-static",
+                                "--enable-gnutls",
+                                "--disable-doc",
+                                "--disable-programs",
+                                "--disable-encoders",
+                                "--disable-muxers",
+                                "--enable-encoder=png",
+                                "--enable-libv4l2",
+                                "--enable-libdav1d"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "https://ffmpeg.org/releases/ffmpeg-4.4.tar.xz",
+                                    "sha256": "06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909",
+                                    "x-checker-data": {
+                                        "type": "anitya",
+                                        "project-id": 5405,
+                                        "stable-only": true,
+                                        "url-template": "https://ffmpeg.org/releases/ffmpeg-$version.tar.xz"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "libass",
+                            "cleanup": [
+                                "/include",
+                                "/lib/*.la",
+                                "/lib/pkgconfig"
+                            ],
+                            "config-opts": [
+                                "--disable-static"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "https://github.com/libass/libass/releases/download/0.15.0/libass-0.15.0.tar.xz",
+                                    "sha256": "9f09230c9a0aa68ef7aa6a9e2ab709ca957020f842e52c5b2e52b801a7d9e833",
+                                    "x-checker-data": {
+                                        "type": "anitya",
+                                        "project-id": 1560,
+                                        "stable-only": true,
+                                        "url-template": "https://github.com/libass/libass/releases/download/$version/libass-$version.tar.xz"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "uchardet",
+                            "buildsystem": "cmake-ninja",
+                            "config-opts": [
+                                "-DCMAKE_BUILD_TYPE=Release",
+                                "-DBUILD_STATIC=0"
+                            ],
+                            "cleanup": [
+                                "/bin",
+                                "/include",
+                                "/lib/pkgconfig",
+                                "/share/man"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "archive",
+                                    "url": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.7.tar.xz",
+                                    "sha256": "3fc79408ae1d84b406922fa9319ce005631c95ca0f34b205fad867e8b30e45b1",
+                                    "x-checker-data": {
+                                        "type": "anitya",
+                                        "project-id": 9265,
+                                        "stable-only": true,
+                                        "url-template": "https://www.freedesktop.org/software/uchardet/releases/uchardet-$version.tar.xz"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "mujs",
+                            "cleanup": [
+                                "/bin",
+                                "/include",
+                                "/lib/pkgconfig",
+                                "/lib/libmujs.a"
+                            ],
+                            "no-autogen": true,
+                            "make-args": [
+                                "release",
+                                "shared"
+                            ],
+                            "make-install-args": [
+                                "prefix=/app",
+                                "install-shared"
+                            ],
+                            "sources": [
+                                {
+                                    "type": "git",
+                                    "url": "https://github.com/ccxvii/mujs",
+                                    "tag": "1.1.2",
+                                    "commit": "7ef066a3bb95bf83e7c5be50d859e62e58fe8515",
+                                    "x-checker-data": {
+                                        "type": "git",
+                                        "tag-pattern": "^([\\d.]+)$"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "youtube-dl",
+            "no-autogen": true,
+            "no-make-install": true,
+            "make-args": [
+                "youtube-dl",
+                "PYTHON=/usr/bin/python3"
+            ],
+            "post-install": [
+                "install youtube-dl /app/bin"
+            ],
+            "sources": [
+                {
                     "type": "git",
-                    "tag-pattern": "^([\\d.]+)$"
-                  }
+                    "url": "https://github.com/ytdl-org/youtube-dl.git",
+                    "tag": "2021.04.26",
+                    "commit": "273964d190fb048477e71114c4734fcb819c5c16",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    }
                 }
-              ]
-            }
-          ]
+            ]
         }
-      ]
-    },
-    {
-      "name": "youtube-dl",
-      "no-autogen": true,
-      "no-make-install": true,
-      "make-args": ["youtube-dl", "PYTHON=/usr/bin/python3"],
-      "post-install": ["install youtube-dl /app/bin"],
-      "sources": [{
-        "type": "git",
-        "url": "https://github.com/ytdl-org/youtube-dl.git",
-        "tag": "2021.03.03",
-        "commit": "f68692b004f1c65f08a9a7d9c2ee4ab2ec255ea6",
-        "x-checker-data": {
-          "type": "git",
-          "tag-pattern": "^([\\d.]+)$"
-        }
-      }]
-    }
-  ]
+    ]
 }
