@@ -12,7 +12,8 @@
         "--share=network",
         "--socket=pulseaudio",
         "--filesystem=xdg-pictures",
-        "--filesystem=xdg-run/gvfs", "--filesystem=xdg-run/gvfsd",
+        "--filesystem=xdg-run/gvfs",
+        "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs",
         "--talk-name=org.gtk.vfs.*",
         "--talk-name=org.gnome.SettingsDaemon.MediaKeys",
@@ -134,8 +135,8 @@
                             "sources": [
                                 {
                                     "type": "archive",
-                                    "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.20.0.tar.bz2",
-                                    "sha256": "956118713f7ccb405c55c7088a6a2490c32d54300dd9a30d8d5008c28d3726f7",
+                                    "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.22.1.tar.bz2",
+                                    "sha256": "65c6fbe830a44ca105c443b027182c1b2c9053a91d1e72ad849dfab388b94e31",
                                     "x-checker-data": {
                                         "type": "anitya",
                                         "project-id": 9998,
@@ -189,8 +190,8 @@
                             "sources": [
                                 {
                                     "type": "archive",
-                                    "url": "https://ffmpeg.org/releases/ffmpeg-4.4.tar.xz",
-                                    "sha256": "06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909",
+                                    "url": "https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz",
+                                    "sha256": "eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02",
                                     "x-checker-data": {
                                         "type": "anitya",
                                         "project-id": 5405,
