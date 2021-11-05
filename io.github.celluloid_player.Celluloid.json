@@ -287,22 +287,22 @@
             ]
         },
         {
-            "name": "youtube-dl",
+            "name": "yt-dlp",
             "no-autogen": true,
             "no-make-install": true,
             "make-args": [
-                "youtube-dl",
+                "yt-dlp",
                 "PYTHON=/usr/bin/python3"
             ],
             "post-install": [
-                "install youtube-dl /app/bin"
+                "install yt-dlp /app/bin"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/ytdl-org/youtube-dl.git",
-                    "tag": "2021.06.06",
-                    "commit": "b224cf39d53bd16bcfda2ac493712c3ff449ecb8",
+                    "url": "https://github.com/yt-dlp/yt-dlp.git",
+                    "tag": "2021.10.22",
+                    "commit": "1117579b9457f8fbf7a4d7433a92b67ac802bdea",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
