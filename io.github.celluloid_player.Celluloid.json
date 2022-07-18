@@ -301,8 +301,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yt-dlp/yt-dlp.git",
-                    "tag": "2022.06.29",
-                    "commit": "84a251e1f5f9d36e89c3b8dc5849fe979ed01359",
+                    "tag": "2022.07.18",
+                    "commit": "0b5583b112d418ba4d4eefcde1cd4d54ab95458a",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
