@@ -35,8 +35,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/celluloid-player/celluloid/releases/download/v0.23/celluloid-0.23.tar.xz",
-                    "sha256": "b22d1963d03f0215bce07c2de8e77892c322f500ae5c0fd6e2e84d2e13f04374",
+                    "url": "https://github.com/celluloid-player/celluloid/releases/download/v0.24/celluloid-0.24.tar.xz",
+                    "sha256": "31e2175a1ccc990d189d8261eefb1b6a4527cb55a58b4db8541331810aec495b",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 193876,
