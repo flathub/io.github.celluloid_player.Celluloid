@@ -11,6 +11,7 @@
         "--device=all",
         "--share=network",
         "--socket=pulseaudio",
+        "--filesystem=xdg-run/pipewire-0:ro",
         "--filesystem=xdg-pictures",
         "--filesystem=xdg-run/gvfs",
         "--filesystem=xdg-run/gvfsd",
@@ -60,7 +61,7 @@
                     ],
                     "buildsystem": "simple",
                     "build-commands": [
-                        "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-build-date --disable-alsa --disable-pipewire",
+                        "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-build-date --disable-alsa",
                         "python3 waf build",
                         "python3 waf install"
                     ],
