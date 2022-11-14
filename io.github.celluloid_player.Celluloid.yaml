@@ -197,6 +197,25 @@ modules:
                   stable-only: true
                   url-template: https://www.freedesktop.org/software/uchardet/releases/uchardet-$version.tar.xz
 
+          - name: rubberband
+            buildsystem: meson
+            config-opts:
+              - "-Ddefault_library=shared"
+            cleanup:
+              - "/bin"
+              - "/include"
+              - "/lib/pkgconfig"
+              - "/lib/ladspa"
+            sources:
+              - type: archive
+                url: https://breakfastquay.com/files/releases/rubberband-3.1.1.tar.bz2
+                sha256: a442551fe7d26fb4a54dd1c34178733dc9c76ac9ce051a02325f5cb35d154381
+                x-checker-data:
+                  type: anitya
+                  project-id: 4222
+                  stable-only: true
+                  url-template: https://breakfastquay.com/files/releases/rubberband-$version.tar.bz2
+
           - name: mujs
             cleanup:
               - "/bin"
