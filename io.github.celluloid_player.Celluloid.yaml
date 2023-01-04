@@ -245,11 +245,11 @@ modules:
             sources:
               - type: git
                 url: https://github.com/haasn/libplacebo.git
-                commit: 34314e37306e3d12fe5a0416c9b79eaf268b0cb2
+                commit: 2394aea167a5995860387a2511f8972143cd5b82
                 x-checker-data:
                   type: git
                   tag-pattern: ^v([\d.]+)$
-                tag: v5.229.1
+                tag: v5.229.2
             modules:
 
               - name: glslang
