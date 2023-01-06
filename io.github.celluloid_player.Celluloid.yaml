@@ -245,11 +245,11 @@ modules:
             sources:
               - type: git
                 url: https://github.com/haasn/libplacebo.git
-                commit: 34314e37306e3d12fe5a0416c9b79eaf268b0cb2
+                commit: 2394aea167a5995860387a2511f8972143cd5b82
                 x-checker-data:
                   type: git
                   tag-pattern: ^v([\d.]+)$
-                tag: v5.229.1
+                tag: v5.229.2
             modules:
 
               - name: glslang
@@ -276,8 +276,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2023.01.02
-        commit: 990dd7b00fc5f7c22ff339d0ca5b5b4f21923dca
+        tag: 2023.01.06
+        commit: 7287ab92f6bcf90f1995fe73b8145f0fd9fadbf4
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
