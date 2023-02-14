@@ -142,6 +142,7 @@ modules:
               - --enable-shared
               - --disable-static
               - --enable-gnutls
+              - --enable-gpl
               - --disable-doc
               - --disable-programs
               - --disable-encoders
