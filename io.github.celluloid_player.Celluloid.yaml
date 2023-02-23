@@ -110,8 +110,8 @@ modules:
               - --with-udevdir=/app/lib/udev
             sources:
               - type: archive
-                url: https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.22.1.tar.bz2
-                sha256: 65c6fbe830a44ca105c443b027182c1b2c9053a91d1e72ad849dfab388b94e31
+                url: https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.24.0.tar.bz2
+                sha256: 17a04144e754cdb42b62df958ec71cf99241a045ff95605c46f04af8aa16c4b6
                 x-checker-data:
                   type: anitya
                   project-id: 9998
@@ -277,8 +277,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2023.01.06
-        commit: 7287ab92f6bcf90f1995fe73b8145f0fd9fadbf4
+        tag: 2023.02.17
+        commit: 41bd0dc4d71919dceeb84a3aab9c9934d46eee9f
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
