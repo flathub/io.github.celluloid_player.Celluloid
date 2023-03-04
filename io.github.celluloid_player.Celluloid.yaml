@@ -152,8 +152,8 @@ modules:
               - --enable-libdav1d
             sources:
               - type: archive
-                url: https://ffmpeg.org/releases/ffmpeg-5.1.2.tar.xz
-                sha256: 619e706d662c8420859832ddc259cd4d4096a48a2ce1eefd052db9e440eef3dc
+                url: https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz
+                sha256: 57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082
                 x-checker-data:
                   type: anitya
                   project-id: 5405
@@ -277,8 +277,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2023.02.17
-        commit: 41bd0dc4d71919dceeb84a3aab9c9934d46eee9f
+        tag: 2023.03.04
+        commit: 8729e7b57c0d6e6350a76f82436e05d7b9891188
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
