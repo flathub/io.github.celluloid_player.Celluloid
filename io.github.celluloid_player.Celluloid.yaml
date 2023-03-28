@@ -32,8 +32,8 @@ modules:
         done
     sources:
       - type: archive
-        url: https://github.com/celluloid-player/celluloid/releases/download/v0.24/celluloid-0.24.tar.xz
-        sha256: 31e2175a1ccc990d189d8261eefb1b6a4527cb55a58b4db8541331810aec495b
+        url: https://github.com/celluloid-player/celluloid/releases/download/v0.25/celluloid-0.25.tar.xz
+        sha256: 4f03cb73fd64b327ed847b106453ab69ab4a02523234bcf3869068903e45c92a
         x-checker-data:
           type: anitya
           project-id: 193876
@@ -232,8 +232,8 @@ modules:
             sources:
               - type: git
                 url: https://github.com/ccxvii/mujs
-                tag: 1.3.2
-                commit: 0e611cdc0c81a90dabfcb2ab96992acca95b886d
+                tag: 1.3.3
+                commit: 57e3f01d5f29c5823be725d96284488edf5f8ae1
                 x-checker-data:
                   type: git
                   tag-pattern: ^([\d.]+)$
@@ -246,11 +246,11 @@ modules:
             sources:
               - type: git
                 url: https://github.com/haasn/libplacebo.git
-                commit: 8ae0648b459d8215bde7772501d5cba17e28bf53
+                commit: ed29e541a55acf28022738440b2a925386292551
                 x-checker-data:
                   type: git
                   tag-pattern: ^v([\d.]+)$
-                tag: v5.264.0
+                tag: v5.264.1
             modules:
 
               - name: glslang
