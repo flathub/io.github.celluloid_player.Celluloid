@@ -32,8 +32,8 @@ modules:
         done
     sources:
       - type: archive
-        url: https://github.com/celluloid-player/celluloid/releases/download/v0.24/celluloid-0.24.tar.xz
-        sha256: 31e2175a1ccc990d189d8261eefb1b6a4527cb55a58b4db8541331810aec495b
+        url: https://github.com/celluloid-player/celluloid/releases/download/v0.25/celluloid-0.25.tar.xz
+        sha256: 4f03cb73fd64b327ed847b106453ab69ab4a02523234bcf3869068903e45c92a
         x-checker-data:
           type: anitya
           project-id: 193876
@@ -67,6 +67,7 @@ modules:
               project-id: 5348
               stable-only: true
               url-template: https://github.com/mpv-player/mpv/archive/v$version.tar.gz
+              is-important: true
           - type: file
             url: https://waf.io/waf-2.0.25
             sha256: 21199cd220ccf60434133e1fd2ab8c8e5217c3799199c82722543970dc8e38d5
@@ -159,6 +160,7 @@ modules:
                   project-id: 5405
                   stable-only: true
                   url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
+                  is-important: true
 
           - name: libass
             cleanup:
