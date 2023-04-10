@@ -134,6 +134,42 @@ modules:
                   type: git
                   tag-pattern: ^n([\d.]+)$
 
+          - name: jpeg-xl
+            buildsystem: cmake-ninja
+            config-opts:
+              - -DCMAKE_BUILD_STATIC_LIBS=OFF
+              - -DJPEGXL_FORCE_SYSTEM_BROTLI=ON
+              - -DJPEGXL_FORCE_SYSTEM_LCMS2=ON
+              - -DJPEGXL_FORCE_SYSTEM_HWY=ON
+              - -DJPEGXL_ENABLE_PLUGINS=OFF
+              - -DJPEGXL_ENABLE_TOOLS=OFF
+              - -DJPEGXL_ENABLE_EXAMPLES=OFF
+              - -DJPEGXL_ENABLE_MANPAGES=OFF
+              - -DJPEGXL_ENABLE_FUZZERS=OFF
+              - -DBUILD_TESTING=OFF
+            post-install:
+              # It doesn't respect disabling static libraries...
+              - rm $FLATPAK_DEST/lib/*.a
+            sources:
+              - type: git
+                url: https://github.com/libjxl/libjxl.git
+                commit: v0.7.0
+            modules:
+
+              - name: hwy
+                buildsystem: cmake-ninja
+                config-opts:
+                  - -DBUILD_SHARED_LIBS=ON
+                  - -DHWY_ENABLE_TESTS=OFF
+                  - -DHWY_ENABLE_EXAMPLES=OFF
+                  - -DHWY_ENABLE_CONTRIB=OFF
+                post-install:
+                  - rm $FLATPAK_DEST/lib/libhwy_test*
+                sources:
+                  - type: archive
+                    url: https://github.com/google/highway/archive/refs/tags/1.0.2.tar.gz
+                    sha256: e8ef71236ac0d97f12d553ec1ffc5b6375d57b5f0b860c7447dd69b6ed1072db
+
           - name: ffmpeg
             cleanup:
               - /include
@@ -151,6 +187,7 @@ modules:
               - --enable-encoder=png
               - --enable-libv4l2
               - --enable-libdav1d
+              - --enable-libjxl
             sources:
               - type: archive
                 url: https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz
