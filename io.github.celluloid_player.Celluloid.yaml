@@ -264,7 +264,6 @@ modules:
             no-autogen: true
             make-args:
               - release
-              - shared
             make-install-args:
               - prefix=/app
               - install-shared
