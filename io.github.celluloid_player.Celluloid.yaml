@@ -199,6 +199,8 @@ modules:
                   stable-only: true
                   url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
                   is-important: true
+              - type: patch
+                path: ffmpeg-binutils.patch
 
           - name: libass
             cleanup:
