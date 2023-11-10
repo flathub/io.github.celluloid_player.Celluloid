@@ -128,8 +128,8 @@ modules:
             sources:
               - type: git
                 url: https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
-                tag: n12.0.16.0
-                commit: c5e4af74850a616c42d39ed45b9b8568b71bf8bf
+                tag: n12.1.14.0
+                commit: 1889e62e2d35ff7aa9baca2bceb14f053785e6f1
                 x-checker-data:
                   type: git
                   tag-pattern: ^n([\d.]+)$
@@ -191,8 +191,8 @@ modules:
               - --enable-libjxl
             sources:
               - type: archive
-                url: https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz
-                sha256: 57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082
+                url: https://ffmpeg.org/releases/ffmpeg-6.0.1.tar.xz
+                sha256: 9b16b8731d78e596b4be0d720428ca42df642bb2d78342881ff7f5bc29fc9623
                 x-checker-data:
                   type: anitya
                   project-id: 5405
@@ -287,11 +287,11 @@ modules:
             sources:
               - type: git
                 url: https://github.com/haasn/libplacebo.git
-                commit: 06b51c6c1bc8be6153823929496eed255dd76e69
+                commit: 2805a0d01c029084ab36bf5d0e3c8742012a0b27
                 x-checker-data:
                   type: git
                   tag-pattern: ^v([\d.]+)$
-                tag: v6.292.1
+                tag: v6.338.1
             modules:
 
               - name: glslang
@@ -318,8 +318,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2023.07.06
-        commit: cc0619f62d6da52689797483e96b29290b0c0873
+        tag: 2023.10.13
+        commit: b73c4093187cffddcb6fbc4bfbdc0fea244ff1e9
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
