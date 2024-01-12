@@ -181,8 +181,8 @@ modules:
               - --enable-libjxl
             sources:
               - type: archive
-                url: https://ffmpeg.org/releases/ffmpeg-6.1.tar.xz
-                sha256: 488c76e57dd9b3bee901f71d5c95eaf1db4a5a31fe46a28654e837144207c270
+                url: https://ffmpeg.org/releases/ffmpeg-6.1.1.tar.xz
+                sha256: 8684f4b00f94b85461884c3719382f1261f0d9eb3d59640a1f4ac0873616f968
                 x-checker-data:
                   type: anitya
                   project-id: 5405
@@ -307,8 +307,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2023.11.16
-        commit: fe6c82ccff6338d97711204162731a8a6741c9b4
+        tag: 2023.12.30
+        commit: 9f40cd289665b2fb8a05ccaf9721b3b2ca0f39c7
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
