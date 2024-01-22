@@ -86,19 +86,17 @@ modules:
                   - sed -i 's|/usr/local|/app|' ./Makefile
 
           - name: libv4l2
+            buildsystem: meson
             cleanup:
               - /sbin
               - /bin
               - /include
-              - /lib/*.la
-              - /lib/*/*.la
-              - /lib*/*/*/*.la
               - /lib/pkgconfig
               - /share/man
             config-opts:
-              - --disable-static
-              - --disable-bpf
-              - --with-udevdir=/app/lib/udev
+              - -Dbpf=disabled
+              - -Dudevdir=/app/lib/udev
+              - -Dsystemdsystemunitdir=/dev/null
             sources:
               - type: archive
                 url: https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.26.1.tar.xz
