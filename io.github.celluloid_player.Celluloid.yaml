@@ -138,6 +138,9 @@ modules:
             post-install:
               # It doesn't respect disabling static libraries...
               - rm $FLATPAK_DEST/lib/*.a
+            cleanup:
+              - /include
+              - /lib/pkgconfig
             sources:
               - type: git
                 url: https://github.com/libjxl/libjxl.git
@@ -153,6 +156,9 @@ modules:
                   - -DHWY_ENABLE_CONTRIB=OFF
                 post-install:
                   - rm $FLATPAK_DEST/lib/libhwy_test*
+                cleanup:
+                  - /include
+                  - /lib/pkgconfig
                 sources:
                   - type: archive
                     url: https://github.com/google/highway/archive/refs/tags/1.0.2.tar.gz
@@ -215,6 +221,7 @@ modules:
               - /include
               - /lib/pkgconfig
               - /share/man
+              - /lib/cmake
             sources:
               - type: archive
                 url: https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.8.tar.xz
