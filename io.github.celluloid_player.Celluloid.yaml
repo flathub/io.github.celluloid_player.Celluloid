@@ -59,8 +59,8 @@ modules:
           - -Dalsa=disabled
         sources:
           - type: archive
-            url: https://github.com/mpv-player/mpv/archive/v0.37.0.tar.gz
-            sha256: 1d2d4adbaf048a2fa6ee134575032c4b2dad9a7efafd5b3e69b88db935afaddf
+            url: https://github.com/mpv-player/mpv/archive/v0.38.0.tar.gz
+            sha256: 86d9ef40b6058732f67b46d0bbda24a074fae860b3eaae05bab3145041303066
             x-checker-data:
               type: anitya
               project-id: 5348
@@ -116,8 +116,8 @@ modules:
             sources:
               - type: git
                 url: https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
-                tag: n12.1.14.0
-                commit: 1889e62e2d35ff7aa9baca2bceb14f053785e6f1
+                tag: n12.2.72.0
+                commit: c69278340ab1d5559c7d7bf0edf615dc33ddbba7
                 x-checker-data:
                   type: git
                   tag-pattern: ^n([\d.]+)$
@@ -185,8 +185,8 @@ modules:
               - --enable-libjxl
             sources:
               - type: archive
-                url: https://ffmpeg.org/releases/ffmpeg-6.1.1.tar.xz
-                sha256: 8684f4b00f94b85461884c3719382f1261f0d9eb3d59640a1f4ac0873616f968
+                url: https://ffmpeg.org/releases/ffmpeg-7.0.tar.xz
+                sha256: 4426a94dd2c814945456600c8adfc402bee65ec14a70e8c531ec9a2cd651da7b
                 x-checker-data:
                   type: anitya
                   project-id: 5405
@@ -312,8 +312,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2023.12.30
-        commit: 9f40cd289665b2fb8a05ccaf9721b3b2ca0f39c7
+        tag: 2024.04.09
+        commit: 168e72dcd3e04e0e19e92c012a04b8a1e4658f50
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
