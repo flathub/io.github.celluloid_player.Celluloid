@@ -124,7 +124,6 @@ modules:
           - name: jpeg-xl
             buildsystem: cmake-ninja
             config-opts:
-              - -DCMAKE_BUILD_STATIC_LIBS=OFF
               - -DJPEGXL_FORCE_SYSTEM_BROTLI=ON
               - -DJPEGXL_FORCE_SYSTEM_LCMS2=ON
               - -DJPEGXL_FORCE_SYSTEM_HWY=ON
