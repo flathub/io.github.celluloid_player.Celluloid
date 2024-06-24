@@ -31,15 +31,15 @@ modules:
         done
     sources:
       - type: archive
-        url: https://github.com/celluloid-player/celluloid/releases/download/v0.27/celluloid-0.27.tar.xz
-        sha256: 216656c4495bb3ca02dc4ad9cf3da8e8f15c8f80e870eeac8eb1eedab4c3788b
+        url: https://github.com/celluloid-player/celluloid/releases/download/v0.26/celluloid-0.26.tar.xz
+        sha256: 6171e7b4e2715484c3203436ed1cd51528d3c7e9e46208f70433f12de5ae5dde
         x-checker-data:
           type: anitya
           project-id: 193876
           stable-only: true
           url-template: https://github.com/celluloid-player/celluloid/releases/download/v$version/celluloid-$version.tar.xz
           is-main-source: true
-    
+
     modules:
       - name: libmpv
         cleanup:
@@ -66,7 +66,7 @@ modules:
               stable-only: true
               url-template: https://github.com/mpv-player/mpv/archive/v$version.tar.gz
               is-important: true
-        
+
         modules:
           - name: luajit
             no-autogen: true
@@ -265,8 +265,8 @@ modules:
             sources:
               - type: git
                 url: https://github.com/ccxvii/mujs
-                tag: 1.3.4
-                commit: a76d157bdaa9aec8de5ea5a362eed2f59139152d
+                tag: 1.3.5
+                commit: 0df0707f2f10187127e36acfbc3ba9b9ca5b5cf0
                 x-checker-data:
                   type: git
                   tag-pattern: ^([\d.]+)$
