@@ -92,6 +92,7 @@ modules:
               - /include
               - /lib/pkgconfig
               - /share/man
+              - /share/doc
             config-opts:
               - -Dbpf=disabled
               - -Dudevdir=/app/lib/udev
@@ -181,6 +182,7 @@ modules:
               - /include
               - /lib/pkgconfig
               - /lib/*.la
+              - /share/doc
             sources:
               - type: archive
                 url: https://lib.openmpt.org/files/libopenmpt/src/libopenmpt-0.7.9+release.autotools.tar.gz
