@@ -142,7 +142,11 @@ modules:
             sources:
               - type: git
                 url: https://github.com/libjxl/libjxl.git
-                commit: v0.7.0
+                commit: v0.11.0
+                x-checker-data:
+                  type: git
+                  tag-pattern: ^v([\d.]+)$
+
             modules:
 
               - name: hwy
@@ -152,15 +156,18 @@ modules:
                   - -DHWY_ENABLE_TESTS=OFF
                   - -DHWY_ENABLE_EXAMPLES=OFF
                   - -DHWY_ENABLE_CONTRIB=OFF
-                post-install:
-                  - rm $FLATPAK_DEST/lib/libhwy_test*
                 cleanup:
                   - /include
                   - /lib/pkgconfig
                 sources:
                   - type: archive
-                    url: https://github.com/google/highway/archive/refs/tags/1.0.2.tar.gz
-                    sha256: e8ef71236ac0d97f12d553ec1ffc5b6375d57b5f0b860c7447dd69b6ed1072db
+                    url: https://github.com/google/highway/archive/refs/tags/1.2.0.tar.gz
+                    sha256: 7e0be78b8318e8bdbf6fa545d2ecb4c90f947df03f7aadc42c1967f019e63343
+                    x-checker-data:
+                      type: anitya
+                      project-id: 205809
+                      stable-only: true
+                      url-template: https://github.com/google/highway/archive/refs/tags/$version.tar.gz
 
           - name: libopenmpt
             config-opts:
