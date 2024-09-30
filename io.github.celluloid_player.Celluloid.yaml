@@ -216,8 +216,8 @@ modules:
               - --enable-libopenmpt
             sources:
               - type: archive
-                url: https://ffmpeg.org/releases/ffmpeg-7.0.2.tar.xz
-                sha256: 8646515b638a3ad303e23af6a3587734447cb8fc0a0c064ecdb8e95c4fd8b389
+                url: https://ffmpeg.org/releases/ffmpeg-7.1.tar.xz
+                sha256: 40973d44970dbc83ef302b0609f2e74982be2d85916dd2ee7472d30678a7abe6
                 x-checker-data:
                   type: anitya
                   project-id: 5405
@@ -343,8 +343,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2024.08.06
-        commit: a065086640e888e8d58c615d52ed2f4f4e4c9d18
+        tag: 2024.09.27
+        commit: 5945fc1945a4001537072e39f03725f944437834
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
