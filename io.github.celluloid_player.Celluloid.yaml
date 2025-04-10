@@ -31,8 +31,8 @@ modules:
         done
     sources:
       - type: archive
-        url: https://github.com/celluloid-player/celluloid/releases/download/v0.27/celluloid-0.27.tar.xz
-        sha256: 216656c4495bb3ca02dc4ad9cf3da8e8f15c8f80e870eeac8eb1eedab4c3788b
+        url: https://github.com/celluloid-player/celluloid/releases/download/v0.28/celluloid-0.28.tar.xz
+        sha256: 5b36fdf0dfff873d149655064350e370872dc54226dd2cbfcc02fa0c107e533a
         x-checker-data:
           type: anitya
           project-id: 193876
@@ -59,8 +59,8 @@ modules:
           - -Dlua=enabled
         sources:
           - type: archive
-            url: https://github.com/mpv-player/mpv/archive/v0.39.0.tar.gz
-            sha256: 2ca92437affb62c2b559b4419ea4785c70d023590500e8a52e95ea3ab4554683
+            url: https://github.com/mpv-player/mpv/archive/v0.40.0.tar.gz
+            sha256: 10a0f4654f62140a6dd4d380dcf0bbdbdcf6e697556863dc499c296182f081a3
             x-checker-data:
               type: anitya
               project-id: 5348
@@ -103,8 +103,8 @@ modules:
             sources:
               - type: git
                 url: https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
-                tag: n12.2.72.0
-                commit: c69278340ab1d5559c7d7bf0edf615dc33ddbba7
+                tag: n13.0.19.0
+                commit: e844e5b26f46bb77479f063029595293aa8f812d
                 x-checker-data:
                   type: git
                   tag-pattern: ^n([\d.]+)$
@@ -281,8 +281,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2025.02.19
-        commit: 9c3e8b16967cb6582712b6b7e4c107631d3873d0
+        tag: 2025.03.31
+        commit: 349f36606fa7fb658216334a73ac7825c13503c2
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
