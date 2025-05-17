@@ -31,8 +31,8 @@ modules:
         done
     sources:
       - type: archive
-        url: https://github.com/celluloid-player/celluloid/releases/download/v0.28/celluloid-0.28.tar.xz
-        sha256: 5b36fdf0dfff873d149655064350e370872dc54226dd2cbfcc02fa0c107e533a
+        url: https://github.com/celluloid-player/celluloid/releases/download/v0.29/celluloid-0.29.tar.xz
+        sha256: 5b9991557cc2764a8281a24aa726a645287eb075cde0f0ae7c737965264a119c
         x-checker-data:
           type: anitya
           project-id: 193876
@@ -281,8 +281,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2025.03.31
-        commit: 349f36606fa7fb658216334a73ac7825c13503c2
+        tag: 2025.04.30
+        commit: b77e5a553a5d91bd059c3e3f1f3698be417132bf
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
