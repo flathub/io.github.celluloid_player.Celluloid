@@ -31,8 +31,8 @@ modules:
         done
     sources:
       - type: archive
-        url: https://github.com/celluloid-player/celluloid/releases/download/v0.28/celluloid-0.28.tar.xz
-        sha256: 5b36fdf0dfff873d149655064350e370872dc54226dd2cbfcc02fa0c107e533a
+        url: https://github.com/celluloid-player/celluloid/releases/download/v0.29/celluloid-0.29.tar.xz
+        sha256: 5b9991557cc2764a8281a24aa726a645287eb075cde0f0ae7c737965264a119c
         x-checker-data:
           type: anitya
           project-id: 193876
@@ -86,8 +86,8 @@ modules:
               - -Dsystemdsystemunitdir=/dev/null
             sources:
               - type: archive
-                url: https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.28.1.tar.xz
-                sha256: 0fa075ce59b6618847af6ea191b6155565ccaa44de0504581ddfed795a328a82
+                url: https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.30.1.tar.xz
+                sha256: c1cf549c2ec3cf39eb5ec7bf15731349e61b26a21b5e963922db422333bae197
                 x-checker-data:
                   type: anitya
                   project-id: 9998
@@ -250,11 +250,11 @@ modules:
             sources:
               - type: git
                 url: https://github.com/haasn/libplacebo.git
-                commit: 1fd3c7bde7b943fe8985c893310b5269a09b46c5
+                commit: 3188549fba13bbdf3a5a98de2a38c2e71f04e21e
                 x-checker-data:
                   type: git
                   tag-pattern: ^v([\d.]+)$
-                tag: v7.349.0
+                tag: v7.351.0
             modules:
 
               - name: glslang
@@ -281,8 +281,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2025.03.31
-        commit: 349f36606fa7fb658216334a73ac7825c13503c2
+        tag: 2025.05.22
+        commit: 415b4c9f955b1a0391204bd24a7132590e7b3bdb
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
