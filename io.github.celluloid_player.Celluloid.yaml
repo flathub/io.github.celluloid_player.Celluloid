@@ -16,6 +16,7 @@ finish-args:
   - --filesystem=xdg-run/gvfsd
   - --talk-name=org.gtk.vfs.*
   - --env=LC_NUMERIC=C
+  - --env=YT_DLP_JS_RUNTIME=deno
 modules:
   - name: celluloid
     buildsystem: meson
@@ -270,6 +271,45 @@ modules:
                     url: https://github.com/KhronosGroup/glslang/archive/refs/tags/11.12.0.tar.gz
                     sha256: 7795a97450fecd9779f3d821858fbc2d1a3bf1dd602617d95b685ccbcabc302f
 
+  - name: deno
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 deno /app/bin/deno
+    sources:
+      # -------- x86_64 build --------
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://github.com/denoland/deno/releases/download/v2.5.6/deno-x86_64-unknown-linux-gnu.zip
+        sha256: fd4f6abc1b6a134fa9a4dba56519f1631f44c88e04e4e3e9a8ff5975dfa66e1a
+        dest-filename: deno.zip
+
+      # -------- aarch64 build --------
+      - type: file
+        only-arches:
+          - aarch64
+        url: https://github.com/denoland/deno/releases/download/v2.5.6/deno-aarch64-unknown-linux-gnu.zip
+        sha256: f5e60ae3dfceb61e5e5a41f22129e40a8bc17f6393b59e75d7ca19ceef32d824
+        dest-filename: deno.zip
+
+      # -------- unpack the zip --------
+      - type: shell
+        commands:
+          - unzip deno.zip
+
+  - name: yt-dlp-ejs
+    buildsystem: simple
+    build-commands:
+      - pip3 install --prefix=/app yt_dlp_ejs*.whl
+    sources:
+      - type: file
+        url: https://github.com/yt-dlp/ejs/releases/download/0.3.1/yt_dlp_ejs-0.3.1-py3-none-any.whl
+        sha256: a6e3548874db7c774388931752bb46c7f4642c044b2a189e56968f3d5ecab622  
+        x-checker-data:
+          type: pypi
+          name: yt-dlp-ejs
+          packagetype: bdist_wheel   
+          
   - name: yt-dlp
     no-autogen: true
     no-make-install: true
