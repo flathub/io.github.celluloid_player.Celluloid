@@ -24,12 +24,6 @@ modules:
       - --buildtype=release
     cleanup:
       - /share/man
-    post-install:
-      - |-
-        for size in 64 128; do
-          rsvg-convert -w $size -h $size -f png -o $size.png /app/share/icons/hicolor/scalable/apps/io.github.celluloid_player.Celluloid.svg
-          install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/io.github.celluloid_player.Celluloid.png
-        done
     sources:
       - type: archive
         url: https://github.com/celluloid-player/celluloid/releases/download/v0.29/celluloid-0.29.tar.xz
