@@ -196,7 +196,7 @@ modules:
           - pip3 install --prefix=/app yt_dlp_ejs*.whl
         sources:
           - type: file
-            url: https://github.com/yt-dlp/ejs/releases/download/0.3.1/yt_dlp_ejs-0.3.1-py3-none-any.whl
+            url: https://files.pythonhosted.org/packages/e7/fd/34fbdaf0d53386c47e219c532a479766cd9336fde34c00834c8e0123df7a/yt_dlp_ejs-0.3.1-py3-none-any.whl
             sha256: a6e3548874db7c774388931752bb46c7f4642c044b2a189e56968f3d5ecab622
             x-checker-data:
               type: pypi
