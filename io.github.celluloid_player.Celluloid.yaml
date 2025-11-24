@@ -171,6 +171,8 @@ modules:
                   type: git
                   tag-pattern: ^v([\d.]+)$
                 tag: v7.351.0
+              - type: patch
+                path: libplacebo-vulkan-python-xml.patch
 
   - name: yt-dlp
     modules:
