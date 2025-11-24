@@ -214,8 +214,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2025.05.22
-        commit: 415b4c9f955b1a0391204bd24a7132590e7b3bdb
+        tag: 2025.11.12
+        commit: 5977782142ca7e41240f07202cc9b8dcc087b401
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
