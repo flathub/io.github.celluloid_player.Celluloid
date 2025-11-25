@@ -89,21 +89,6 @@ modules:
                   stable-only: true
                   url-template: https://linuxtv.org/downloads/v4l-utils/v4l-utils-$version.tar.xz
 
-          - name: nv-codec-headers
-            cleanup:
-              - '*'
-            no-autogen: true
-            make-install-args:
-              - PREFIX=/app
-            sources:
-              - type: git
-                url: https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
-                tag: n13.0.19.0
-                commit: e844e5b26f46bb77479f063029595293aa8f812d
-                x-checker-data:
-                  type: git
-                  tag-pattern: ^n([\d.]+)$
-
           - name: libopenmpt
             config-opts:
               - --disable-static
