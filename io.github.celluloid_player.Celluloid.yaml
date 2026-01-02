@@ -54,8 +54,8 @@ modules:
           - -Dlua=enabled
         sources:
           - type: archive
-            url: https://github.com/mpv-player/mpv/archive/v0.40.0.tar.gz
-            sha256: 10a0f4654f62140a6dd4d380dcf0bbdbdcf6e697556863dc499c296182f081a3
+            url: https://github.com/mpv-player/mpv/archive/v0.41.0.tar.gz
+            sha256: ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209
             x-checker-data:
               type: anitya
               project-id: 5348
@@ -246,8 +246,8 @@ modules:
           - pip3 install --prefix=/app yt_dlp_ejs*.whl
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/e7/fd/34fbdaf0d53386c47e219c532a479766cd9336fde34c00834c8e0123df7a/yt_dlp_ejs-0.3.1-py3-none-any.whl
-            sha256: a6e3548874db7c774388931752bb46c7f4642c044b2a189e56968f3d5ecab622
+            url: https://files.pythonhosted.org/packages/9d/0d/1f0d7a735ca60b87953271b15d00eff5eef05f6118390ddf6f81982526ed/yt_dlp_ejs-0.3.2-py3-none-any.whl
+            sha256: f2dc6b3d1b909af1f13e021621b0af048056fca5fb07c4db6aa9bbb37a4f66a9
             x-checker-data:
               type: pypi
               name: yt-dlp-ejs
@@ -264,8 +264,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2025.11.12
-        commit: 5977782142ca7e41240f07202cc9b8dcc087b401
+        tag: 2025.12.08
+        commit: aa220d0aaac0f1562af658e34a28de72ec0ecb9f
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
