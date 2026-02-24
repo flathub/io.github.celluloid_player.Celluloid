@@ -273,6 +273,4 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
-
-
-
+          is-important: true
