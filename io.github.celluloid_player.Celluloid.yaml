@@ -214,13 +214,11 @@ modules:
             sources:
               - type: git
                 url: https://github.com/haasn/libplacebo.git
-                commit: 3188549fba13bbdf3a5a98de2a38c2e71f04e21e
+                tag: v7.360.0
+                commit: b2ea27dceb6418aabfe9121174c6dbb232942998
                 x-checker-data:
                   type: git
                   tag-pattern: ^v([\d.]+)$
-                tag: v7.351.0
-              - type: patch
-                path: libplacebo-vulkan-python-xml.patch
 
   - name: yt-dlp
     modules:
@@ -230,16 +228,16 @@ modules:
           - install -Dm755 deno /app/bin/deno
         sources:
           - type: archive
-            url: https://github.com/denoland/deno/releases/download/v2.6.3/deno-x86_64-unknown-linux-gnu.zip
-            sha256: b3c24dc6f3982607896bd795fd6bcbdc53f3d11e8d8190b2a07fd1881eb1148a
+            url: https://github.com/denoland/deno/releases/download/v2.6.10/deno-x86_64-unknown-linux-gnu.zip
+            sha256: a7c9d5c1f93bfaabe03c3c0583a8c88caf695db3cec4dea2938440038609f225
             only-arches: [x86_64]
             x-checker-data:
               type: anitya
               project-id: 133196
               url-template: https://github.com/denoland/deno/releases/download/v$version/deno-x86_64-unknown-linux-gnu.zip
           - type: archive
-            url: https://github.com/denoland/deno/releases/download/v2.6.3/deno-aarch64-unknown-linux-gnu.zip
-            sha256: 92c9496e8c71e6b18abf1f728d6223bb682749e4946f24589a7ef8972fec423e
+            url: https://github.com/denoland/deno/releases/download/v2.6.10/deno-aarch64-unknown-linux-gnu.zip
+            sha256: ad4031b16b193997cd40d2bf68c9af8b5148e0f39c1e975cfbb6d60ecec19496
             only-arches: [aarch64]
             x-checker-data:
               type: anitya
@@ -252,8 +250,8 @@ modules:
           - pip3 install --prefix=/app yt_dlp_ejs*.whl
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/9d/0d/1f0d7a735ca60b87953271b15d00eff5eef05f6118390ddf6f81982526ed/yt_dlp_ejs-0.3.2-py3-none-any.whl
-            sha256: f2dc6b3d1b909af1f13e021621b0af048056fca5fb07c4db6aa9bbb37a4f66a9
+            url: https://files.pythonhosted.org/packages/7e/5b/1283356b70d4893a8a050cee15092e1b08ea15310b94365f88067146721b/yt_dlp_ejs-0.5.0-py3-none-any.whl
+            sha256: 674fc0efea741d3100cdf3f0f9e123150715ee41edf47ea7a62fbdeda204bdec
             x-checker-data:
               type: pypi
               name: yt-dlp-ejs
@@ -270,8 +268,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2025.12.08
-        commit: aa220d0aaac0f1562af658e34a28de72ec0ecb9f
+        tag: 2026.02.21
+        commit: e2a9cc7d137c88843e064bc9ea11cdca5cd4c82a
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
