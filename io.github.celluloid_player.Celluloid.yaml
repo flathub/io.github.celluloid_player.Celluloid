@@ -236,8 +236,8 @@ modules:
               project-id: 133196
               url-template: https://github.com/denoland/deno/releases/download/v$version/deno-x86_64-unknown-linux-gnu.zip
           - type: archive
-            url: https://github.com/denoland/deno/releases/download/v2.6.10/deno-aarch64-unknown-linux-gnu.zip
-            sha256: ad4031b16b193997cd40d2bf68c9af8b5148e0f39c1e975cfbb6d60ecec19496
+            url: https://github.com/denoland/deno/releases/download/v2.7.2/deno-aarch64-unknown-linux-gnu.zip
+            sha256: c36c0b284d084dfe7045a106e60bd98d919183fd69d7902a42f3c7a244bf4386
             only-arches: [aarch64]
             x-checker-data:
               type: anitya
@@ -268,8 +268,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2026.02.21
-        commit: e2a9cc7d137c88843e064bc9ea11cdca5cd4c82a
+        tag: 2026.03.03
+        commit: b8058cdf378cbbf60669b665dea146fb7dc90117
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
