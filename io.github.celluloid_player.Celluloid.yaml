@@ -129,8 +129,8 @@ modules:
               - --disable-static
             sources:
               - type: archive
-                url: https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz
-                sha256: 78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a
+                url: https://github.com/libass/libass/releases/download/0.17.5/libass-0.17.5.tar.xz
+                sha256: 2dca25c0e0c837ddf00b52011b3f82cac1e4ddd3ad018227806b0c2288864acc
                 x-checker-data:
                   type: anitya
                   project-id: 1560
@@ -228,16 +228,16 @@ modules:
           - install -Dm755 deno /app/bin/deno
         sources:
           - type: archive
-            url: https://github.com/denoland/deno/releases/download/v2.8.3/deno-x86_64-unknown-linux-gnu.zip
-            sha256: 30455b845ffa6082209c3590269c910ad3b7efdf28c9879afd4006c47ae54197
+            url: https://github.com/denoland/deno/releases/download/v2.9.1/deno-x86_64-unknown-linux-gnu.zip
+            sha256: 710c54d63477d1100844ef4818f19507ce0dbf40510903b1d883f19e394446a2
             only-arches: [x86_64]
             x-checker-data:
               type: anitya
               project-id: 133196
               url-template: https://github.com/denoland/deno/releases/download/v$version/deno-x86_64-unknown-linux-gnu.zip
           - type: archive
-            url: https://github.com/denoland/deno/releases/download/v2.8.3/deno-aarch64-unknown-linux-gnu.zip
-            sha256: d4589cc1ffcbf1995c92a0127d932aaf832ac70cfdcc6d5b7bf38043cf303575
+            url: https://github.com/denoland/deno/releases/download/v2.9.1/deno-aarch64-unknown-linux-gnu.zip
+            sha256: 0a60d079fa79635a59803074dbbfe86ccc35746dc2c4f8d73f2e50338b3283a9
             only-arches: [aarch64]
             x-checker-data:
               type: anitya
@@ -268,8 +268,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/yt-dlp/yt-dlp.git
-        tag: 2026.06.09
-        commit: 7f7bdc974dc61d941d1a0d51c4e21a0fdb7b2d06
+        tag: 2026.07.04
+        commit: fdec00e0bf530dc6c3cc7b1dd780e95d9ae460e9
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
