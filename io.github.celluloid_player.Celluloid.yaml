@@ -111,8 +111,8 @@ modules:
               - --enable-libopenmpt
             sources:
               - type: archive
-                url: https://ffmpeg.org/releases/ffmpeg-9.0.1.tar.xz
-                sha256: cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635
+                url: https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz
+                sha256: 8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e
                 x-checker-data:
                   type: anitya
                   project-id: 5405
@@ -228,16 +228,16 @@ modules:
           - install -Dm755 deno /app/bin/deno
         sources:
           - type: archive
-            url: https://github.com/denoland/deno/releases/download/v2.9.5/deno-x86_64-unknown-linux-gnu.zip
-            sha256: 8b010a3b1a4a0188a67cdb8a7a27348b2a501af78aec7fc74f2ace167368d530
+            url: https://github.com/denoland/deno/releases/download/v2.9.7/deno-x86_64-unknown-linux-gnu.zip
+            sha256: c6527f24f4b16031d3ae4fa9f658d5f11534c8d84ce7dc8502420280919c3490
             only-arches: [x86_64]
             x-checker-data:
               type: anitya
               project-id: 133196
               url-template: https://github.com/denoland/deno/releases/download/v$version/deno-x86_64-unknown-linux-gnu.zip
           - type: archive
-            url: https://github.com/denoland/deno/releases/download/v2.9.5/deno-aarch64-unknown-linux-gnu.zip
-            sha256: 6b7cae3a8fc4385a59dea3146fcb8bad7fea4230e0ad36a8c692afacbc254be0
+            url: https://github.com/denoland/deno/releases/download/v2.9.7/deno-aarch64-unknown-linux-gnu.zip
+            sha256: c832298b1ad4422481334855f6003e0f54145762c5a134f20a489511d2f65bbf
             only-arches: [aarch64]
             x-checker-data:
               type: anitya
