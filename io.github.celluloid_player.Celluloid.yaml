@@ -36,23 +36,6 @@ modules:
           is-main-source: true
 
     modules:
-      - name: libudfread
-        buildsystem: meson
-        sources:
-          - type: archive
-            url: https://download.videolan.org/pub/videolan/libudfread/libudfread-1.2.0.tar.xz
-            sha256: bb477cbd4cfbfc7787d9d05b71ee5e70430f5cfebf1297497f7e83547958050f
-
-      - name: libbluray
-        buildsystem: meson
-        config-opts:
-          - -Dbdj_jar=disabled
-          - -Denable_docs=false
-          - -Denable_tools=false
-        sources:
-          - type: archive
-            url: https://download.videolan.org/pub/videolan/libbluray/1.5.0/libbluray-1.5.0.tar.xz
-            sha256: f676408e91a5d321abf8b8d4dfdae36205c297dab5c54c3ec519639025f474a2
       - name: libmpv
         cleanup:
           - /include
@@ -82,6 +65,34 @@ modules:
 
         modules:
           - shared-modules/lua5.1/lua-5.1.5.json
+
+          - name: libudfread
+            buildsystem: meson
+            sources:
+              - type: archive
+                url: https://download.videolan.org/pub/videolan/libudfread/libudfread-1.2.0.tar.xz
+                sha256: bb477cbd4cfbfc7787d9d05b71ee5e70430f5cfebf1297497f7e83547958050f
+                x-checker-data:
+                  type: anitya
+                  project-id: 17118
+                  stable-only: true
+                  url-template: https://download.videolan.org/pub/videolan/libudfread/libudfread-$version.tar.xz
+
+          - name: libbluray
+            buildsystem: meson
+            config-opts:
+              - -Dbdj_jar=disabled
+              - -Denable_docs=false
+              - -Denable_tools=false
+            sources:
+              - type: archive
+                url: https://download.videolan.org/pub/videolan/libbluray/1.5.0/libbluray-1.5.0.tar.xz
+                sha256: f676408e91a5d321abf8b8d4dfdae36205c297dab5c54c3ec519639025f474a2
+                x-checker-data:
+                  type: anitya
+                  project-id: 1564
+                  stable-only: true
+                  url-template: https://download.videolan.org/pub/videolan/libbluray/$version/libbluray-$version.tar.xz
 
           - name: libopenmpt
             config-opts:
