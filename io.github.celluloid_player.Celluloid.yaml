@@ -34,6 +34,8 @@ modules:
           stable-only: true
           url-template: https://github.com/celluloid-player/celluloid/releases/download/v$version/celluloid-$version.tar.xz
           is-main-source: true
+      - type: patch
+        path: fix-appdata.patch
 
     modules:
       - name: libmpv

@@ -1,0 +1,21 @@
+From e0355224930d7409b171d369a836fc3c85ca5f6f Mon Sep 17 00:00:00 2001
+From: PunkPangolin <116445585+PunkPangolin@users.noreply.github.com>
+Date: Mon, 27 Apr 2026 19:02:32 +0200
+Subject: [PATCH] fix `vcs-browser` in appdata.xml
+
+---
+ data/io.github.celluloid_player.Celluloid.appdata.xml.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/data/io.github.celluloid_player.Celluloid.appdata.xml.in b/data/io.github.celluloid_player.Celluloid.appdata.xml.in
+index 8ef1bbe1..fa23a856 100644
+--- a/data/io.github.celluloid_player.Celluloid.appdata.xml.in
++++ b/data/io.github.celluloid_player.Celluloid.appdata.xml.in
+@@ -655,6 +655,6 @@
+  <url type="bugtracker">https://github.com/celluloid-player/celluloid/issues</url>
+  <url type="donation">https://paypal.me/CelluloidProject</url>
+  <url type="translate">https://hosted.weblate.org/projects/celluloid/</url>
+- <url type="vcs-browser">https://github.com/celluloid/celluloid</url>
++ <url type="vcs-browser">https://github.com/celluloid-player/celluloid</url>
+  <update_contact>gnome-mpv@km.away.im</update_contact>
+ </component>
