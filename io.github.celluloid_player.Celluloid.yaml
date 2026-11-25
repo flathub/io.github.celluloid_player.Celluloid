@@ -76,7 +76,7 @@ modules:
                 sha256: bb477cbd4cfbfc7787d9d05b71ee5e70430f5cfebf1297497f7e83547958050f
                 x-checker-data:
                   type: anitya
-                  project-id: 17118
+                  project-id: 89591
                   stable-only: true
                   url-template: https://download.videolan.org/pub/videolan/libudfread/libudfread-$version.tar.xz
 
@@ -92,7 +92,7 @@ modules:
                 sha256: f676408e91a5d321abf8b8d4dfdae36205c297dab5c54c3ec519639025f474a2
                 x-checker-data:
                   type: anitya
-                  project-id: 1564
+                  project-id: 1565
                   stable-only: true
                   url-template: https://download.videolan.org/pub/videolan/libbluray/$version/libbluray-$version.tar.xz
 
